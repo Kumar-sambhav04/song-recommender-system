@@ -10,7 +10,7 @@ st.set_page_config(
     #layout="wide"
 )
 st.image("images/banner1.png", width=1000)
-st.title("Song Recommender System")
+st.header("Song Recommender System")
 st.write("Find song similar to your Request")
 
 st.sidebar.title("About")
