@@ -39,7 +39,7 @@ selected_song = st.selectbox(
     "Select a Song",
     new_df["track_name"].values,
     index= None,
-    placeholder= "Enter Song (Enter Without Space)",
+    placeholder= "Enter Song",
 )
 
 def song_re(song):
