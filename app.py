@@ -9,7 +9,7 @@ st.set_page_config(
     #page_icon="🎵",
     #layout="wide"
 )
-st.image("images/banner.png", width=800)
+st.image("images/banner.png", width=500)
 st.title("Song Recommender System")
 st.write("Find song similar to your Request")
 
