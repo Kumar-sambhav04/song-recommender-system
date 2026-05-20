@@ -18,8 +18,9 @@ st.sidebar.write(
     "This is a Machine Learning based Spotify song recommendation system that suggest similar song based on user selection.   "
     "The project uses KNN and Count Vectorization to find similarities and generate recommendations.")
 
-def fetch_poster(song_name):
-    url = f"https://itunes.apple.com/search?term={song_name}&limit=1"
+def fetch_poster(song_name, artist_name):
+    query = f"{song_name} {artist_name}"
+    url = f"https://itunes.apple.com/search?term={query}&limit=1"
 
     response = requests.get(url)
     data = response.json()
@@ -53,10 +54,11 @@ def song_re(song):
     for el in indices[0]:
         song_name = new_df.loc[el]["track_name"]
         song_track_id = new_df.loc[el]["track_id"]
+        artist_name = new_df.iloc[el]["artists"]
 
         spotify_link = f"https://open.spotify.com/track/{song_track_id}"
 
-        poster = fetch_poster(song_name)
+        poster = fetch_poster(song_name,artist_name)
 
         rec_songs.append((song_name, spotify_link, poster))
 
