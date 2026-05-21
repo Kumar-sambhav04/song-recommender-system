@@ -37,7 +37,7 @@ vectors = pickle.load(open("vectors.pkl","rb"))
 
 selected_song = st.selectbox(
     "Select a Song",
-    new_df["track_name","artists"].values,
+    new_df["track_name"].values,
     index= None,
     placeholder= "Enter Song",
 )
