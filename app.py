@@ -44,7 +44,7 @@ selected_song = st.selectbox(
 
 def song_re(song):
 
-    song_index = new_df[new_df["track_name"] == song].index[0]
+    song_index = new_df[(new_df["track_name"] == song) | (new_df["artists"] == song)].index[0]
 
     distances,indices =  model.kneighbors(
         vectors[song_index:song_index+1],
