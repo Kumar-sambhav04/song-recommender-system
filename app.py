@@ -17,7 +17,7 @@ st.sidebar.title("About")
 st.sidebar.write(
     "This is a Machine Learning based Spotify song recommendation system that suggest similar song based on user selection.   "
     "The project uses KNN and Count Vectorization to find similarities and generate recommendations.\n " 
-    "The suggesions are based on the data set used, so it may not have all the songs available on spotify")
+    "The suggesions are based on the data set used to make this project, so it may not have all the songs that are available on spotify")
 
 def fetch_poster(song_name, artist_name):
     query = f"{song_name} {artist_name}"
